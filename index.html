@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Cinescape - Accueil</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styleIndex.css" />
+    <link href="font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet" media="all" />
+    <link rel="stylesheet" href="CSS3-Slider-master/style/slider-def.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+
+
+        <!--MODAL CONNEXION -->
+
+
+
+        <div id="cModal" class="cModal">
+            <div class="fenetreModal">
+
+                <header>
+                    <a href="#fermer" title="Fermer la fenêtre" class="droite">X</a>
+                    <h2>CONNEXION</h2>
+                </header>
+
+                <form method="post">
+                    <input class="champ" name="pseudo" type="text" placeholder="E-MAIL / PSEUDO" required>
+                    <input class="champ" name="passe" type="password" placeholder="MOT DE PASSE" required>
+                    <input type="submit" id="btnValider" value="Valider">
+
+                </form>
+
+                <footer class="cf">
+
+                </footer>
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+        <!--MODAL INSCRIPTION-->
+
+
+
+        <div id="iModal" class="cModal">
+            <div class="fenetreModal">
+
+                <header>
+                    <a href="#fermer" title="Fermer la fenêtre" class="droite">X</a>
+                    <h2>INSCRIPTION </h2>
+                </header>
+
+                <form method="post" id="formInscription">
+                    <input class="champ" name="nom" type="text" placeholder="NOM" required>
+
+                    <input class="champ" name="prenom" type="text" placeholder="PRÉNOM" required>
+
+                    <input class="champ" name="pseudo" type="text" placeholder="PSEUDO" required>
+
+                    <input class="champ" name="email" type="text" placeholder="E-MAIL">
+
+                    <input class="champ" name="passe" type="password" placeholder="MOT DE PASSE" required>
+
+                    <input class="champ" name="passeConfirm" type="password" placeholder="CONFIRMER LE MOT DE PASSE" required>
+
+                    <input type="submit" id="btnValider" value="Valider">
+
+
+                </form>
+
+                <footer class="cf">
+
+
+                </footer>
+
+
+            </div>
+        </div>
+
+    </header>
+    
+    
+    <div id="pagepiling">
+
+    <div id="accueil" class="section">
+
+        <div>
+
+            <video id="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+                <source src="Images/Into%20The%20Atmosphere%20-%20Timelapse.mp4" type="video/mp4">
+                    <source src="Outils-Web.fr.ogv" type="video/ogg">
+                        <img src="Images/fondAccueil.jpg" width="100%" height="100%">
+            </video>
+
+        </div>
+
+
+        <div id="btnVoyages">
+
+            <ul class="niveau1">
+
+                <li id="lienVoyages">VOYAGES
+
+                    <ul class="niveau2">
+
+                        <li class="scrollTo" href="#map">MAP</li>
+                        <li>RÉGIONS</li>
+                        <li>BLEDS</li>
+
+                    </ul>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div id="btnCinema">
+
+            <ul class="niveau1">
+
+                <li id="lienVoyages">FILMS
+
+                    <ul id="niveau2Cine" class="niveau2">
+
+                        <li class="scrollTo" href="#map">MAP</li>
+                        <li>RÉGIONS</li>
+                        <li>BLEDS</li>
+
+                    </ul>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div id="titres">
+
+            <h1>CINESCAPE</h1>
+            <h2>Quand le voyage rencontre le cinéma</h2>
+
+        </div>
+
+        <div id="btnConnexion">
+
+            <a id="lienConnexion" href="#cModal">Connexion</a>
+
+        </div>
+
+        <div id="btnInscription">
+
+            <a id="lienInscription" href="#iModal">Inscription</a>
+
+        </div>
+
+
+
+        <a class="scrollTo" href="#menu">
+            <span class="fa fa-chevron-circle-down fa-5x"></span>
+        </a>
+
+    </div>
+    
+    
+
+    <div id="menu">
+
+
+        <ul>
+            <li class="hvr-overline-reveal">
+                <a class="scrollTo" id="lienMenu1" href="#presentation">
+                    ACCUEIL
+                </a>
+            </li>
+            <li class="hvr-overline-reveal">
+                <a class="scrollTo" id="lienMenu2" href="#competences">
+                    VOYAGE
+                </a>
+            </li>
+            <li class="hvr-overline-reveal">
+                <a class="scrollTo" id="lienMenu3" href="#realisations">
+                    CINÉMA
+                </a>
+            </li>
+            <li class="hvr-overline-reveal">
+                <a class="scrollTo" id="lienMenu4" href="#contact">
+                    <img id="iconeProfil" src="Images/user.svg"/>
+                </a>
+            </li>
+            <li class="hvr-overline-reveal">
+                <a class="scrollTo" id="lienMenu5" href="#contact">
+                    <img id="iconeRecherche" src="Images/iconeRecherche.png"/>
+                </a>
+            </li>
+
+        </ul>
+        
+
+    </div>
+
+    <div id="slider">
+        <div class="slides">
+
+            <!-- First slide -->
+            <div class="slider">
+                <div class="legend"></div>
+                <div class="content">
+                    <div class="content-txt">
+                        <h1> Voyagez au centre de la Terre </h1> 
+                        <h2> Découverte de la nouvelle caméra trop bien</h2>
+                        <a href="#">Voir l'article</a>
+                    </div>
+                </div>
+                <div class="images">
+                    <img src="Images/slider1.jpg">
+                </div>
+            </div>
+
+            <!-- Second slide -->
+            <div class="slider">
+                <div class="legend"></div>
+                <div class="content">
+                    <div class="content-txt">
+                        <h1> Le Seigneur des Anneaux </h1> 
+                        <h2> Le film de Tolkien au coeur de la Nouvelle-Zélande </h2>
+                        <a href="article.html">Voir l'article</a>
+                    </div>
+                </div>
+                <div class="images">
+                    <img src="Images/23918_the_lord_of_the_rings_the_ring.jpg">
+                </div>
+            </div>
+
+            <!-- Third slide -->
+            <div class="slider">
+                <div class="legend"></div>
+                <div class="content">
+                    <div class="content-txt">
+                        <h1> Your title </h1> 
+                        <h2> Your description </h2>
+                        <a href="#">Voir l'article</a>
+                    </div>
+                </div>
+                <div class="images">
+                    <img src="Images/slider3.jpg">
+                </div>
+            </div>
+
+            <!-- Fourth slide -->
+            <div class="slider">
+                <div class="legend"></div>
+                <div class="content">
+                    <div class="content-txt">
+                        <h1> Your title </h1> 
+                        <h2> Your description </h2>
+                        <a href="#">Voir l'article</a>
+                    </div>
+                </div>
+                <div class="images">
+                    <img src="Images/slider4.jpg">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <h3 id="titreArtRecents">ARTICLES RÉCENTS</h3>
+        
+    <hr class="hrTitres">
+
+    <div id="articlesRecents">
+        <ul id="imgArticles">
+            <li id="art1">
+                <h4>Salut</h4>
+                <p>Lorem ipsum Lorem ipsum Lorem ipsum</p>
+            </li>
+            <li id="art2">
+                <h4>Salut</h4>
+                <p>Lorem ipsum Lorem ipsum Lorem ipsum</p>
+            </li>
+            <li id="art3">
+                <h4>Salut</h4>
+                <p>Lorem ipsum Lorem ipsum Lorem ipsum</p>
+            </li>
+            <li id="art4">
+                <h4>Salut</h4>
+                <p>Lorem ipsum Lorem ipsum Lorem ipsum</p>
+            </li>
+            <li id="art5">
+                <h4>Salut</h4>
+                <p>Lorem ipsum Lorem ipsum Lorem ipsum</p>
+            </li>
+            <li id="art6">
+                <h4>Salut</h4>
+                <p>Lorem ipsum Lorem ipsum Lorem ipsum</p>
+            </li>
+
+        </ul>
+
+    </div>
+        
+    
+    <h3>LA MAP</h3>
+        
+    <hr class="hrTitres">
+    
+    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10664.776686924166!2d-0.7646461999999999!3d48.067894849999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1445199318910" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        
+    
+    
+    </div>
+    
+    <footer id="footerAccueil">
+        
+    </footer>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.scrollTo').click(function () { // Au clic sur un élément
+                var page = $(this).attr('href'); // Page cible
+                var speed = 750; // Durée de l'animation (en ms)
+                $('html, body').animate({
+                    scrollTop: $(page).offset().top
+                }, speed); // Go
+                return false;
+            });
+        });
+    </script>
+
+</body>
+
+</html>
