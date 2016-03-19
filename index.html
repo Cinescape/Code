@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Cinescape - Accueil</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="Images/logoNoir.png" />
+    <link rel="stylesheet" href="css/styleIndex.css" />
+    <link rel="stylesheet" href="css/commun.css" />
+    <link href="font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet" media="all" />
+    <link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="Hover-master/css/hover-min.css">
+    <link rel="stylesheet" href="css3-animate-it-master/css/animations.css">
+    <script src="js/pace.js"></script>
+</head>
+
+<body>
+
+    <header>
+
+        <!--MODAL CONNEXION -->
+
+        <div id="cModal" class="cModal">
+            <div class="fenetreModal">
+
+                <header>
+                    <a href="#fermer" title="Fermer la fenêtre" class="droite">X</a>
+                    <h2>CONNEXION</h2>
+                </header>
+
+                <form method="post">
+                    <input class="champ" name="pseudo" type="text" placeholder="PSEUDO" required>
+                    <input class="champ" name="passe" type="password" placeholder="MOT DE PASSE" required>
+                    <input type="submit" id="btnValider" value="Valider">
+
+                </form>
+
+
+
+
+            </div>
+        </div>
+
+        <!--MODAL INSCRIPTION-->
+
+        <div id="iModal" class="cModal">
+            <div class="fenetreModal">
+
+                <header>
+                    <a href="#fermer" title="Fermer la fenêtre" class="droite">X</a>
+                    <h2>INSCRIPTION </h2>
+                </header>
+
+                <form method="post" id="formInscription">
+                    <input class="champ" name="nom" type="text" placeholder="NOM" required>
+
+                    <input class="champ" name="prenom" type="text" placeholder="PRÉNOM" required>
+
+                    <input class="champ" name="pseudo" type="text" placeholder="PSEUDO" required>
+
+                    <input class="champ" name="email" type="text" placeholder="E-MAIL">
+
+                    <input class="champ" name="passe" type="password" placeholder="MOT DE PASSE" required>
+
+                    <input class="champ" name="passeConfirm" type="password" placeholder="CONFIRMER LE MOT DE PASSE" required>
+
+                    <input type="submit" id="btnValider" value="Valider">
+
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Page vidéo -->
+
+
+    <div id="accueil" class="section">
+
+        <div>
+
+            <video id="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+                <source src="Images/Into%20The%20Atmosphere%20-%20Timelapse.mp4" type="video/mp4">
+                <source src="Outils-Web.fr.ogv" type="video/ogg">
+                <img src="Images/fondAccueil.jpg" width="100%" height="100%">
+            </video>
+
+        </div>
+
+
+        <div id="btnVoyages">
+
+            <ul class="niveau1">
+
+                <li id="lienVoyages">VOYAGE
+
+                    <ul class="niveau2" id="sousMenuVoyageAccueil">
+
+                        <li class="scrollTo" href="#map"><a>MAP</a></li>
+
+                        <li><a>RÉGIONS</a></li>
+                        <li><a>BLEDS</a></li>
+
+                    </ul>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div id="btnCinema">
+
+            <ul class="niveau1">
+
+                <li id="lienVoyages">CINÉMA
+
+                    <ul class="niveau2" id="sousMenuCinemaAccueil">
+
+                        <li class="scrollTo" href="#map"><a>MAP</a></li>
+                        <li><a>RÉGIONS</a></li>
+                        <li><a>BLEDS</a></li>
+
+                    </ul>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class='animatedParent' id="titres">
+
+            <img class='animated fadeIn slower' id="logoAccueil" src="Images/logoAnime.gif" />
+
+            <h1 class='animated fadeInDownShort slower'>CINESCAPE</h1>
+            <h2 class='animated fadeInUpShort slower'>Quand le voyage rencontre le cinéma</h2>
+
+            <div id="containerFleche">
+                <a class="scrollTo" href=".menu">
+                    <!--<span class="fa fa-angle-down fa-5x animated fadeInDownShort slower"></span>-->
+                    <button id="btnEntrer">ENTRER</button>
+                </a>
+            </div>
+
+        </div>
+
+        <div id="btnConnexion">
+
+            <a id="lienConnexion" href="#cModal">Connexion</a>
+
+        </div>
+
+        <div id="btnInscription">
+
+            <a id="lienInscription" href="#iModal">Inscription</a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Page d'accueil -->
+
+
+    <!-- MENU -->
+
+    <nav class="menu nav">
+
+        <ol>
+            <li id="logo">
+                <a href="index.html">
+                    <img id="logoMenu" src="Images/logoBlanc.png" />
+                    <p>CINESCAPE</p>
+                </a>
+            </li>
+
+            <li class='animatedClick' data-target='clickSearch' id="rechercheMenu">
+                <img class="icon" id="iconeRecherche" src="Images/iconeRecherche.png" />
+            </li>
+
+            <li class="btnMenu" id="voyageMenu">
+                <a href="#">
+                    VOYAGE
+                </a>
+
+                <ul class="niveau2">
+                    <li><a>Articles</a></li>
+
+                    <li><a>Conseils de voyage</a></li>
+                </ul>
+
+            </li>
+
+            <li class="btnMenu" id="cinemaMenu">
+                <a href="#">
+                    CINÉMA
+                </a>
+
+                <ul class="niveau2">
+                    <li><a>Articles</a></li>
+                    <li><a>RÉGIONS</a></li>
+                </ul>
+
+            </li>
+
+            <li class='animatedClick' data-target='clickUser' id="userMenu">
+                <a>
+                    <div id="imgUser"></div>
+                </a>
+            </li>
+
+            <div id="containerReseaux">
+                <ul id="iconesReseaux">
+                    <li class="liReseaux">
+                        <a class="scrollTo" id="lienMenu2" href="#">
+                            <img class="icon" id="imgFb" src="Images/facebook.svg" />
+                        </a>
+                    </li>
+                    <li class="liReseaux">
+                        <a class="scrollTo" id="lienMenu2" href="#">
+                            <img class="icon" id="imgGoogle" src="Images/google.svg" />
+                        </a>
+                    </li>
+
+                    <li class="liReseaux">
+                        <a class="scrollTo" id="lienMenu2" href="#">
+                            <img class="icon" id="imgTwitter" src="Images/twitter.svg" />
+                        </a>
+                    </li>
+
+                    <li class="liReseaux">
+                        <a class="scrollTo" id="lienMenu2" href="#">
+                            <img class="icon" id="imgYt" src="Images/youtube.svg" />
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </ol>
+
+        <ol>
+
+            <li class="btnMenu" id="voyageMenuMobile">
+                <a href="#">
+                    VOYAGE
+                </a>
+
+                <ul class="niveau2">
+                    <li><a>Articles</a></li>
+                    <li><a>Conseils de voyage</a></li>
+                </ul>
+
+            </li>
+
+            <li class="btnMenu" id="cinemaMenuMobile">
+                <a href="#">
+                    CINÉMA
+                </a>
+
+                <ul class="niveau2">
+                    <li><a>Articles</a></li>
+                    <li><a>RÉGIONS</a></li>
+                </ul>
+
+            </li>
+
+        </ol>
+
+        <div class='animated fadeInDownShort clickSearch fadeOutLeft' id="searchbar">
+            <form action="" class="formulaire">
+                <input id="recherche" class="champ" type="text" placeholder="Recherche..." />
+
+            </form>
+        </div>
+
+        <div class='animated fadeInRightShort clickUser fadeOutRight' id="userPanel">
+            <ul>
+                <h5 id="userName">Sylvain Durif</h4>
+                <li>
+                    <a href="profil.html">Accéder au profil</a>
+                </li>
+                <li>
+                    <a>Lorem Ipsum</a>
+                </li>
+                <li>
+                    <a>Lorem Ipsum</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <!-- Slider -->
+
+    <div class="slider-container">
+        <div class="slider-control left inactive"></div>
+        <div class="slider-control right"></div>
+        <ul class="slider-pagi"></ul>
+        <div class="slider">
+            <div class="slide slide-0 active">
+                <div class="slide__bg"></div>
+                <div class="slide__content">
+                    <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                        <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                    </svg>
+                    <div class="slide__text">
+                        <h2 class="slide__text-heading">Le Seigneur Des Anneaux</h2>
+                        <a>Par ItachiTiti</a>
+                        <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
+                        <a class="slide__text-link" href="article1.html">Lire l'article</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide slide-1 ">
+                <div class="slide__bg"></div>
+                <div class="slide__content">
+                    <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                        <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                    </svg>
+                    <div class="slide__text">
+                        <h2 class="slide__text-heading">Game Of Thrones au Maroc</h2>
+                        <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
+                        <a class="slide__text-link" href="article2.html">Lire l'article</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide slide-2">
+                <div class="slide__bg"></div>
+                <div class="slide__content">
+                    <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                        <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                    </svg>
+                    <div class="slide__text">
+                        <h2 class="slide__text-heading">Top 10 voyage et cinéma</h2>
+                        <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
+                        <a class="slide__text-link" href="article3.html">Lire l'article</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide slide-3">
+                <div class="slide__bg"></div>
+                <div class="slide__content">
+                    <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                        <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                    </svg>
+                    <div class="slide__text">
+                        <h2 class="slide__text-heading">LE SEIGNEUR DES ANNEAUX & LE HOBBIT</h2>
+                        <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
+                        <a class="slide__text-link" href="article4.html">Lire l'article</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Images slider -->
+    
+    <style>
+        .slide:nth-child(1) .slide__bg {
+            background-image: url("Images/Articles/leSeigneurDesAnneaux/banniereFilm.jpg");
+        }
+        .slide:nth-child(2) .slide__bg {
+            background-image: url("Images/Articles/GoTMaroc/banniereFilm.jpg");
+        }
+        .slide:nth-child(3) .slide__bg {
+            background-image: url("Images/Articles/top10VoyageEtCinema/banniere.jpg");
+        }
+        .slide:nth-child(4) .slide__bg {
+            background-image: url("Images/Articles/SdaHobbit/banniereFilm.jpg");
+        }
+    </style>
+
+
+    <div class="container">
+
+        <!-- Articles récents -->
+
+        <h3 id="titreArtRecents">ARTICLES RÉCENTS</h3>
+
+        <hr class="hrTitres">
+
+        <div class="row" id="articlesRecents">
+            <ul id="imgArticles">
+                <div class="row">
+                    <div class="col-xs-12 col-md-4">
+                        <li class="artPreview" id="art1">
+                            <a href="article1.html">
+                                <h4>Le Seigneur Des Anneaux</h4>
+                                <p>Auteur: ItachiTiti</p>
+                            </a>
+                        </li>
+                        <style>
+                            #art1 {
+    background-image: url(Images/Articles/leSeigneurDesAnneaux/banniereFilm.jpg);
+                            }
+                        </style>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <li class="artPreview" id="art2">
+                            <a href="article2.html">
+                                <h4>Game Of Thrones au Maroc</h4>
+                                <p>Lorem ipsum Lorem ipsum Lorem ipsum</p>
+                            </a>
+                        </li>
+                        <style>
+                            #art2 {
+    background-image: url(Images/Articles/GoTMaroc/banniereFilm.jpg);
+                            }
+                        </style>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <li class="artPreview" id="art3">
+                            <a href="article3.html">
+                                <h4>Top 10 voyage et cinéma</h4>
+                                <p>Lorem ipsum Lorem ipsum Lorem ipsum</p>
+                            </a>
+                        </li>
+                        <style>
+                            #art3 {
+    background-image: url(Images/Articles/top10VoyageEtCinema/banniere.jpg);
+                            }
+                        </style>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-4">
+                        <li class="artPreview" id="art4">
+                            <a href="article4.html">
+                                <h4>LE SEIGNEUR DES ANNEAUX & LE HOBBIT</h4>
+                                <p>Lorem ipsum Lorem ipsum Lorem ipsum</p>
+                            </a>
+                        </li>
+                        <style>
+                            #art4 {
+    background-image: url(Images/Articles/SdaHobbit/banniereFilm.jpg);
+                            }
+                        </style>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <li class="artPreview" id="art5">
+                            <a href="article.html">
+                                <h4>Lorem Ipsum</h4>
+                                <p>Lorem ipsum Lorem ipsum Lorem ipsum</p>
+                            </a>
+                        </li>
+                        <style>
+                            #art5 {
+    background-image: url(Images/slider5.jpg);
+                            }
+                        </style>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <li class="artPreview" id="art6">
+                            <a href="article.html">
+                                <h4>Lorem Ipsum</h4>
+                                <p>Lorem ipsum Lorem ipsum Lorem ipsum</p>
+                            </a>
+                        </li>
+                        <style>
+                            #art6 {
+    background-image: url(Images/fondAccueil.jpg);
+                            }
+                        </style>
+                    </div>
+                </div>
+
+            </ul>
+
+        </div>
+
+        <!-- MAP -->
+
+        <h3>LA MAP</h3>
+
+        <hr class="hrTitres">
+
+
+
+        <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10664.776686924166!2d-0.7646461999999999!3d48.067894849999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1445199318910" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+    </div>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>2016 © Cinescape</p>
+
+    </footer>
+    
+    <!-- Loader -->
+
+    <div class="loader">
+
+        <canvas id="canvas" width="250" height="250"></canvas>
+
+    </div>
+
+    <!-- Scripts -->
+
+    <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+
+    <script type="text/javascript" src="css3-animate-it-master/js/css3-animate-it.js"></script>
+
+    <script type="text/javascript" src="js/index.js"></script>
+    
+    <script type="text/javascript" src="js/commun.js"></script>
+
+</body>
+
+</html>
